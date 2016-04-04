@@ -6,21 +6,7 @@ import { Link } from 'react-router'
 export default class NavBar extends Component {
 
   createLinkItems() {
-    // let navLinks = [
-    //   {
-    //     title: "test1",
-    //     href:"#"
-    //   },
-    //   {
-    //     title: "test2",
-    //     href:"#"
-    //   },
-    //   {
-    //     title: "test3",
-    //     href:"#"
-    //   }
-    // ];
-    return this.props.navData.map( link => <NavItem key={link.title} linkData={link} /> )
+    return this.props.navData.map( link => <NavItem key={link.title} linkData={link} location={this.props.location} /> )
   }
 
   render(){

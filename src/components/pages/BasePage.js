@@ -24,7 +24,7 @@ export default class BasePage extends Component {
     ];
     return(
       <div>
-        <NavBar navData={navData} />
+        <NavBar navData={navData} location={this.props.location} />
         {this.props.children}
       </div>
     )
