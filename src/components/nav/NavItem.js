@@ -12,11 +12,6 @@ export default class NavItem extends Component {
     }
   }
 
-  isActive() {
-    // return this.props.location.pathname == this.this.props.linkData.href
-    if(this.props.location.pathname == this.props.linkData.href) this.setState({active: true})
-  }
-
   mouseOver(e){
     this.setState({hover: true})
   }
@@ -31,8 +26,7 @@ export default class NavItem extends Component {
         onMouseOver={this.mouseOver.bind(this)}
         onMouseOut={this.mouseOut.bind(this)}
         className={
-          this.state.hover ? "btn-info" : '',
-          // this.state.active ? "active" : ""
+          this.state.hover ? "btn-info" : '' +
           path == link.href ? "active" : ""
         }>
           <Link to={link.href}>{link.title}</Link>
